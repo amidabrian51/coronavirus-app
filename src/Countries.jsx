@@ -19,7 +19,7 @@ class Countries extends Component {
     );
     return (
       <div>
-        <h1>Here is my CoronoVirus App</h1>
+        <h1>Here is my CoronaVirus App</h1>
         <input
           type="search"
           placeholder="Search Countries"
