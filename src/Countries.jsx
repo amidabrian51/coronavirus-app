@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { CardList } from "./components/card-list/card-list";
+import { SearchBox } from "./components/search-box/search-box";
+
 class Countries extends Component {
   constructor(props) {
     super(props);
@@ -19,11 +21,11 @@ class Countries extends Component {
     );
     return (
       <div>
-        <h1>Here is my CoronaVirus App</h1>
-        <input
-          type="search"
+        
+       
+        <SearchBox 
           placeholder="Search Countries"
-          onChange={e => this.setState({ searchField: e.target.value })}
+          handlechange={e => this.setState({ searchField: e.target.value })}
         />
         <CardList countries={filterCountries} />
       </div>

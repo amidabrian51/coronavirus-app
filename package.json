@@ -1,15 +1,17 @@
 {
-  "homepage": "https://amidabrian51.github.io/coronavirus-app/",
+  "homepage": "https://amidabrian51.github.io/coronavirus-app",
   "name": "coronavirus-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@callstack/react-theme-provider": "^2.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "styled-reset": "^4.1.2"
   },
   "scripts": {
     "predeploy": "npm run build",
