@@ -9,15 +9,20 @@ class Countries extends Component {
       countries: [],
       searchField: ""
     };
+    // this.handlechange = this.handlechange.bind(this);
   }
   componentDidMount() {
-    fetch("https://corona.lmao.ninja/countries")
+    fetch("https://corona.lmao.ninja/v2/countries")
       .then(response => response.json())
       .then(countries => this.setState({ countries: countries }));
   }
+
+  handlechange = (e) => {
+    this.setState({searchField: e.target.value})
+  }
   render() {
     const { countries, searchField } = this.state;
-    const filterCountries = countries.filter(country => country.country.toLowerCase().includes(searchField.toLowerCase())
+    const filterCountries = countries.filter((country) => country.country.toLowerCase().includes(searchField.toLowerCase())
     );
     return (
       <div>
@@ -25,7 +30,7 @@ class Countries extends Component {
        
         <SearchBox 
           placeholder="Search Countries"
-          handlechange={e => this.setState({ searchField: e.target.value })}
+          handlechange={ this.handlechange }
         />
         <CardList countries={filterCountries} />
       </div>
